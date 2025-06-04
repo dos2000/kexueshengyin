@@ -16,7 +16,40 @@
     <link rel="stylesheet" href="../css/owl.transitions.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/style.css"> 
+    <!-- 新增背景样式 -->
+    <style>
+        body {
+            background-image: url('../images2025/slider/slider-img-1.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+        }
+        /* 新增菜单样式 */
+        .nav.navbar-nav {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 140px; /* 假设 logo 高度 120px + 顶部间距 10px + 菜单与 logo 间距 10px */
+        }
 
+        .nav.navbar-nav li {
+            margin: 10px 17px;
+        }
+
+        .nav.navbar-nav li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .nav.navbar-nav li a:hover {
+            color: red;
+        }
+    </style>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
         <script src="js/respond.min.js"></script>
@@ -25,96 +58,62 @@
 </head>
 
 <body>
-    <!-- Header End -->
-    <header>
-        <!-- Navigation Menu start-->
-		
-	<nav id="topNav" class="navbar navbar-default main-menu">
-    <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-            ☰
-        </button> 
-		 <a class="navbar-brand page-scroll" href="#slider"><img class="logo" id="logo" src="../images2025/logo.png" alt="logo"></a>
-        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
-            <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="../index.html#account">官方账号</a>
-                        </li>
-                        <li>
-                            <a href="../index.html#about">关于我们</a>
-                        </li>
-						 <li>
-                            <a href="../index.html#menuCard">荣誉奖项</a>
-                        </li>
-						 <li>
-                            <a href="../index.html#xunmi">寻秘自然</a>
-                        </li> 
-                        <li>
-                            <a href="../index.html#team">创作团队</a>
-                        </li> 
-                        <li>
-                            <a href="../index.html#books">科普图书</a>
-                        </li>
-                        <li>
-                            <a href="../index.html#contact">联系我们</a>
-                        </li>
-            </ul> 
-        </div>
+
+    <img id="logo" src="../images2025/logo.png" style="
+    width: 120px;
+    position: fixed;   
+    top: 10px;
+    left: 50%;         
+    transform: translateX(-50%); 
+    "
+    />
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="../index.html#account">官方账号</a>
+            </li>
+            <li>
+                <a href="../index.html#about">关于我们</a>
+            </li>
+            <li>
+                <a href="../index.html#menuCard">荣誉奖项</a>
+            </li>
+            <li>
+                <a href="../index.html#xunmi">寻秘自然</a>
+            </li> 
+            <li>
+                <a href="../index.html#team">创作团队</a>
+            </li> 
+            <li>
+                <a href="../index.html#books">科普图书</a>
+            </li>
+            <li>
+                <a href="../index.html#contact">联系我们</a>
+            </li>
+        </ul> 
     </div>
-</nav>
 
-        
-    </header>
-    <!-- Header End -->
-    <section class="slider-pro slider" id="slider" style="position: relative; z-index: 1;">
-        <div class="sp-slides">
+    <img src="./26.c405a39f.gif" style="width: 60%; height: auto; margin: 25px auto 0; display: block; border-radius: 60px;">
 
-            <div class="sp-slide main-slides">
-            <div class="img-overlay"></div>
-                <img class="sp-image" src="../images2025/slider/slider-img-1.jpg" alt="Slider 2"/> 
-                <h1 class="sp-layer slider-text-big"
-                data-position="center" data-show-transition="left" data-hide-transition="right" data-vertical="55%" data-show-delay="1500" data-hide-delay="200">
-                </h1> 
-            </div>
-
-        </div>
-    </section>
-    <!-- Main Slider End -->
-
-    <img id="bookimg" src="./26.c405a39f.gif" 
-        style="
-        max-width: 100%;
-        height: auto;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
-        display: block;
-        border-radius: 55px;
-        ">
-
-
-    <footer>
-
+    <footer style="margin-top: 50px;">
         <div class="container">
             <div class="row">
                 <div class="footer-containertent">
-
-                        <p></br>
-                            © 2025. 上海光锥文化传媒有限公司 保留所有权利 </br> 
-                            <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-                                沪ICP备18047362号-3
-                            </a> &nbsp;&nbsp;
-                            <a href="https://beian.mps.gov.cn/#/query/webSearch?code=31011202013076" target="_blank">
-                                沪公网安备31011202013076号
-                            </a>
-                        </p>
+                    <p></br>
+                        © 2025. 上海光锥文化传媒有限公司 保留所有权利 </br> 
+                        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+                            沪ICP备18047362号-3
+                        </a> &nbsp;&nbsp;
+                        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=31011202013076" target="_blank">
+                            沪公网安备31011202013076号
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Footer End -->
+
+
 
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
