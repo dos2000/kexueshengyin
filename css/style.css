@@ -162,25 +162,16 @@ a:active{
 
 .account-buttons {
     display: flex;
+    flex-wrap: wrap; /* 让按钮在宽度不足时折行 */
     justify-content: center;
     gap: 20px;
-    /* 移除原有的 margin-top */
-    /* margin-top: -10px !important; */
-    position: relative; /* 添加相对定位 */
-    top: -40px; /* 上移 30px */
-    /* 添加以下样式来处理溢出 */
+    position: relative; 
+    top: 0; /* 恢复顶部位置，避免上移导致看不见 */
     max-width: 100%;
-    /* 恢复为 auto */
-    overflow: auto;
-    /* 隐藏水平滚动条（可选） */
-    overflow-x: auto;
-    /* 隐藏滚动条（可选） */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    /* 添加红色外框 */
+    overflow: visible; /* 让内容正常显示，不隐藏溢出部分 */
     border: 0px solid rgb(255, 255, 255);
-    /* 添加内边距，为阴影留出空间 */
-    padding: 10px 10px 120px 10px; 
+    padding: 10px; /* 适当调整内边距 */
+    margin-bottom: 40px; /* 增加底部间距 */;
 }
 
 .account-buttons::-webkit-scrollbar { 
@@ -189,11 +180,11 @@ a:active{
 
 .account-button {
     display: inline-block;
+    max-width: 60px;
+    max-height: 60px;
     border-radius: 50%;
-    /* 适当调整阴影大小 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    /* 添加外框 */
     border: 1px solid rgb(255, 255, 255);
 }
 
@@ -204,9 +195,21 @@ a:active{
 }
 
 .round-icon {
-    width: 50px;
-    height: 50px;
+    width: 100%; 
+    height: 100%;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.round-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* 黑色半透明蒙版初始状态，透明度为 0 */
@@ -242,7 +245,11 @@ a:active{
     border-radius: 16px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease; /* 增加过渡时间到 0.5 秒 */
+    transition: opacity 0.5s ease;
+    /* 新增以下样式 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #social-popup.show {
@@ -256,10 +263,9 @@ a:active{
     display: flex;
     flex-wrap: wrap; 
     gap: 20px; 
-    justify-content: flex-start; 
+    justify-content: center; /* 修改为居中对齐 */
     align-items: flex-start; 
     width: 100%; 
-    /* 确保容器正常显示 */
     box-sizing: border-box;
 }
 
@@ -350,7 +356,7 @@ a:active{
 .honor-description {
     font-size: 14px;
     color: #333;
-    line-height: 1.5;
+    line-height: 2;
 }
 /* 荣誉奖项结束 */
 
@@ -1446,6 +1452,7 @@ header.page-header .main-menu.minified{
     position: relative;
     padding-left: 20px; /* 为圆点留出空间 */
     margin-bottom: 10px; /* 列表项之间的间距 */
+    color:#fff
 }
 
 .teams-slides ul li::before {
